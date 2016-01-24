@@ -3,7 +3,7 @@
 #include <pwd.h>
 #include <getopt.h>
 
-main ()
+int main ()
 {
 struct passwd  *pw;
 uid_t uid;

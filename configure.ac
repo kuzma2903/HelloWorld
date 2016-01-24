@@ -1,23 +1,15 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.69])
-AC_INIT(<name>.c)
-AC_CONFIG_SRCDIR([false.c])
-AC_CONFIG_HEADERS([config.h])
 
-# Checks for programs.
+AC_INIT(false, 0.1)
+AM_INIT_AUTOMAKE
 AC_PROG_CC
-
-# Checks for libraries.
-
-# Checks for header files.
-AC_CHECK_HEADERS([unistd.h])
-
-# Checks for typedefs, structures, and compiler characteristics.
-AC_TYPE_UID_T
-
-# Checks for library functions.
-
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES(Makefile)
+AC_CHECK_HEADERS(stdio.h)
+AC_CHECK_HEADERS(sys/types)
+AC_CHECK_HEADERS(getopt.h)
+AC_CHECK_HEADERS(unistd.h)
+AC_CHECK_HEADERS(pwd.h)
+AC_CHECK_LIB(c, printf)
 AC_OUTPUT
